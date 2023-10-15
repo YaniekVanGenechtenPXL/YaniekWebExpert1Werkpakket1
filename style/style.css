@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
   background-color: #2b7180;
@@ -109,8 +110,11 @@ header nav ul li img {
   height: 30px;
 }
 
+main#mainIndex {
+  width: 100%;
+}
 main#mainIndex #hero {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: top center;
@@ -124,7 +128,7 @@ main#mainIndex #hero h1, main#mainIndex #hero h5 {
   top: 20vh;
 }
 main#mainIndex #hero #arrowdowncontainer {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   position: absolute;
   bottom: 50px;
@@ -190,8 +194,9 @@ main#mainIndex #brand div.brand__container div.textcontainer {
   height: 100%;
   padding: 30px 30px 50px 30px;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
   color: #000;
 }
 main#mainIndex #brand div.brand__container div.textcontainer h2 {
@@ -250,10 +255,11 @@ main#mainIndex #trending #trendingContainer .trendingBox p span {
 
 footer {
   background-color: #899d5e;
-  width: 100vw;
+  width: 100%;
   padding: 5vw 2vw 7vw 2vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 footer p, footer a {
   color: #FFF;
@@ -278,7 +284,7 @@ footer ul li ul img {
 
 main#main__login {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 main#main__login #homebutton {
   position: absolute;
@@ -304,6 +310,7 @@ main#main__login section {
 main#main__login #content {
   background-color: #899d5e;
   padding-top: 20vh;
+  float: left;
 }
 main#main__login #content h1 {
   color: white;
@@ -336,6 +343,7 @@ main#main__login #content form #buttonscontainer {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 main#main__login #content form #buttonscontainer button {
   width: 46%;
@@ -374,6 +382,7 @@ main#main__login #content a {
   font-size: auto;
 }
 main#main__login #inlogCover {
+  float: right;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -381,7 +390,7 @@ main#main__login #inlogCover {
 }
 
 main#main__overview {
-  width: 100vw;
+  width: 100%;
 }
 main#main__overview #overview__cover {
   background-size: cover;
@@ -402,7 +411,7 @@ main#main__overview #overview__cover h1 a {
   color: #899d5e;
 }
 main#main__overview section {
-  width: 100vw;
+  width: 100%;
   float: right;
   background-color: #FFF;
 }
@@ -412,6 +421,7 @@ main#main__overview section div#overview__products {
 main#main__overview section div#overview__products div#overview__filters {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 5vh;
   background-color: #2b7180;
   padding: 30px;
@@ -511,51 +521,59 @@ main#main__overview section div#overview__products div.overview__flexbox div.ove
   text-decoration: line-through #F00;
 }
 
-#detailpage {
-  background-color: #FFF;
-}
-
 main#main__detail {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
-}
-main#main__detail div#detail__top {
-  width: 100%;
-}
-main#main__detail div#detail__bottom {
-  width: 100%;
+  padding-top: 100px;
 }
 main#main__detail h2 {
   color: #2b7180;
-  margin: 5vh 0;
 }
-main#main__detail div#detail__cover {
-  width: 48%;
-  float: left;
-}
-main#main__detail div#detail__cover img {
+main#main__detail div#detail__top {
   width: 100%;
-  border: 5px solid #2b7180;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-main#main__detail div#detail__info {
-  width: 48%;
-  float: right;
+main#main__detail div#detail__top div#detail__imgcontainer {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-main#main__detail div#detail__info > p {
+main#main__detail div#detail__top div#detail__imgcontainer img {
+  aspect-ratio: 1/1;
+  width: 50%;
+  border: 2px solid #2b7180;
+}
+main#main__detail div#detail__top div#detail__imgcontainer div#detail__secimg {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main#main__detail div#detail__top div#detail__imgcontainer div#detail__secimg img {
+  border: none;
+  opacity: 50%;
+}
+main#main__detail div#detail__top div#detail__info {
+  width: 20%;
+}
+main#main__detail div#detail__top div#detail__info > p {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.5em;
   color: #899d5e;
   margin-bottom: 5vh;
 }
-main#main__detail div#detail__info > p span {
+main#main__detail div#detail__top div#detail__info > p span {
   margin-right: 25px;
   text-decoration: line-through #f00;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: auto;
 }
-main#main__detail div#detail__info #detail__addtocart {
+main#main__detail div#detail__top div#detail__info #detail__addtocart {
   background-color: #899d5e;
   display: flex;
   justify-content: "";
@@ -563,7 +581,7 @@ main#main__detail div#detail__info #detail__addtocart {
   width: 250px;
   height: 40px;
 }
-main#main__detail div#detail__info #detail__addtocart select {
+main#main__detail div#detail__top div#detail__info #detail__addtocart select {
   width: 20%;
   height: 100%;
   background-color: #2b7180;
@@ -571,11 +589,11 @@ main#main__detail div#detail__info #detail__addtocart select {
   border: none;
   padding: 5px;
 }
-main#main__detail div#detail__info #detail__addtocart div {
+main#main__detail div#detail__top div#detail__info #detail__addtocart div {
   width: 80%;
   height: 100%;
 }
-main#main__detail div#detail__info #detail__addtocart div a {
+main#main__detail div#detail__top div#detail__info #detail__addtocart div a {
   color: #FFF;
   text-decoration: none;
   width: 100%;
@@ -587,27 +605,36 @@ main#main__detail div#detail__info #detail__addtocart div a {
   justify-content: center;
   align-items: center;
 }
-main#main__detail div#detail__info hr {
-  height: 2px;
+main#main__detail div#detail__bottom {
   width: 100%;
-  margin: 5vh 0;
-  background-color: #899d5e;
-  color: #899d5e;
-  border: none;
+  padding: 50px 0;
 }
-main#main__detail div#detail__info .detail__info__texts {
+main#main__detail div#detail__bottom .detail__info__texts {
   margin-bottom: 2vh;
 }
-main#main__detail div#detail__info .detail__info__texts h3 {
+main#main__detail div#detail__bottom .detail__info__texts h3 {
   color: #899d5e;
   font-size: 2em;
 }
-main#main__detail div#detail__info .detail__info__texts ul {
+main#main__detail div#detail__bottom .detail__info__texts ul {
   margin-left: 20px;
+  list-style: none;
+  position: relative;
+  top: -18px;
+}
+main#main__detail div#detail__bottom .detail__info__texts ul li::before {
+  content: "•";
+  color: #2b7180;
+  display: inline-block;
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+  position: relative;
+  top: 22px;
 }
 
-@media screen and (min-width: 550px) and (max-width: 900px) {
-  header #navdiv2 {
+@media screen and (max-width: 900px) {
+  header #navdiv1 ul li:nth-child(2) {
     display: none;
   }
   main#mainIndex #hero h1, main#mainIndex #hero h5 {
@@ -645,12 +672,6 @@ main#main__detail div#detail__info .detail__info__texts ul {
   main#main__overview div#overview__cover {
     height: 30vh;
   }
-  main#main__overview div.overview__flexbox {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
   main#main__login #content {
     width: 80%;
   }
@@ -659,11 +680,20 @@ main#main__detail div#detail__info .detail__info__texts ul {
     filter: blur(2px);
     overflow-x: hidden;
   }
-}
-@media screen and (max-width: 550px) {
-  header #navdiv2 {
-    display: none;
+  main#main__detail {
+    width: 90%;
   }
+  main#main__detail div#detail__top {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main#main__detail div#detail__top div#detail__imgcontainer, main#main__detail div#detail__top div#detail__info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
   div.overview__flexbox {
     justify-content: space-around !important;
   }
