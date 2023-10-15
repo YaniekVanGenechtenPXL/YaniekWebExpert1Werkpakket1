@@ -1,0 +1,17 @@
+{
+  "name": "pe1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-sass -o css scss/main.scss --watch",
+    "prod": "node-sass -o css scss/main.scss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.3"
+  }
+}
